@@ -5,7 +5,7 @@ Project ini adalah Submission dari materi [Belajar Dasar Pemrograman Web](https:
 <p><i>Tampilan Dekstop</i></p>
 <img src="assets/image/screenshot/dekstop.png">
 <br>
-<p><i>Tampilan Mobile<i></p>
+<p><i>Tampilan Mobile</i></p>
 <img src="assets/image/screenshot/mobile.png">
 
 ## Submission
