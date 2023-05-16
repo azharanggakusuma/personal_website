@@ -26,8 +26,6 @@ Untuk bisa lulus dan mendapatkan sertifikat dari akademi ini, Anda harus mengerj
 ## Harap diperhatikan!
 Bagi teman-teman yang masih mengikuti kelas dari dicoding, [Belajar Dasar Pemrograman Web](https://www.dicoding.com/academies/123). Silahkan gunakan source ini sebagai bahan referensi, tapi TIDAK untuk disalin secara utuh tanpa tau cara implementasinya.
 
-Ayolah kawan.. Kalian sudah bayar mahal untuk ikut kelas ini, kalian harus dapat ilmunya. Percuma kalian dapat sertifikat dari dicoding kalau di kemudian hari kalian tidak mendapatkan ilmunya dari sini.
+Semangat kawan.. Perjalanan masih panjang. Lakukan yang terbaik yang kalian bisa. Silahkan tanya saya jika ada yang kurang dimengerti.
 
-Semangat kawan.. Perjalanan masih panjang. Lakukan yang terbaik yang kalian bisa. Silahkan tanya saya jika ada yang kurang dimengerti. Kalau saya bisa bantu, pasti saya dampingi.
-
-Mari kita maju bersama-sama..
+@azharangga_kusuma
