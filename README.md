@@ -1,5 +1,5 @@
-# Personal Website (Azharangga Kusuma)
-Project ini adalah Submission dari materi [Belajar Dasar Pemrograman Web](https://www.dicoding.com/academies/123).
+# Personal Website
+Project ini adalah Submission dari materi [Belajar Dasar Pemrograman Web](https://www.dicoding.com/academies/123). Di project ini saya mendapatkan bintang 5 serta mendapatkan komentar yang bagus dari para code reviewer.
 
 ### Preview
 <p><i>Tampilan Dekstop</i></p>
