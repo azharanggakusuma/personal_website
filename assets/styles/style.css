@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+nav {
+    text-align: center;
+    background-color: transparent;
+    padding: 3.5vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; /* menentukan tingkat kedalaman */
+}
+
+nav .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+nav .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .nav-links {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Animasi Link Menu */
+nav .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-scrolled {
+    background-color: #000000;
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #00c6ff, #0072ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f7fff7;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.second-title {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fade-in {
+    animation: fade 4s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: rotate3d(2, 2, 0, 48deg);
+    }
+    20% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 24deg);
+    }
+    80% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 24deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate3d(-2, -2, 0, 48deg);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, transform 0.2s;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 0 10px;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #fff;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #D72638;
+    transform: scale(1.1);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #D72638;
+    color: #fff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #D72638;
+    border: 1px solid #D72638;
+}
+
+.title:hover {
+    text-shadow: 4px 4px #D72638;
+    transition: text-shadow 0.2s;
+}
+
+h2 {
+    color: #00a2c6;
+}
+
+h3 {
+    color: #00a2c6;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.project-table, .certificate-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.project-table th, .project-table td, 
+.certificate-table th, .certificate-table td
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.project-table th, .certificate-table th {
+    background-color: #f2f2f2;
+}
+
+.project-table tr:nth-child(even), .certificate-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.project-table td:first-child, .project-table th:first-child,
+.certificate-table td:first-child, .certificate-table th:first-child
+{
+    text-align: center;
+}
+
+.button-project, .button-certificate {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0077cc;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    max-width: 65px;
+    max-height: 65px;
+}
+
+.button-project:hover {
+    background-color: #005ea8;
+}
+
+.certificate-table {
+    margin-top: 25px;
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.certificate-card {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.certificate-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.profile figure {
+    margin: 20px 0;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 25px;
+}
+
+.profile figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+table th {
+    font-weight: 600;
+    color: #333333;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+social-icons a {
+    color: white;
+    margin: 0 10px;
+}
+
+.social-icons a i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+
+.social-icons a:hover {
+    color: gray;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1200px) {
+    html, body {
+        font-size: 18px;
+    }
+
+    .jumbotron {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+
+@media only screen and (max-width: 1025px) {
+    #content, aside {
+        width: 100%;
+        padding: 0;
+    }
+
+    html, body {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .profile img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .jumbotron {
+        padding: 0 4%;
+    }
+
+    html, body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        background-color: #000000;
+    }
+
+    nav .hamburger-menu {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    nav .nav-links.active {
+        display: block;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .certificate-table {
+        margin-top: -25px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+
+@media only screen and (max-width: 496px) {
+    html, body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 5px;
+        position: sticky;
+        top: 0;
+        min-height: 60px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    html, body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    nav {
+        min-height: 60px;
+    }
+
+    .jumbotron a {
+        font-size: 13px;
+    }
+
+    .btn:link, .btn:visited {
+        padding: 7px 25px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 396px) {
+    nav li {
+        margin-right: 13px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 369px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    nav {
+        padding: 2px;
+        min-height: 50px;
+    }
+
+    .jumbotron a {
+        font-size: 13px;
+    }
+
+    .btn:link, .btn:visited {
+        padding: 5px 20px;
+    }
+    
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 352px) {
+    nav li {
+        margin-right: 12px;
+    }
+
+    .jumbotron a {
+        font-size: 10px;
+    }
+
+    .btn:link, .btn:visited {
+        padding: 3px 15px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .btn:link, .btn:visited {
+        margin-top: 10px;
+        padding: 1px 13px;
+        border-radius: 200px;
+    }
+
+    html, body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    nav {
+        min-height: 45px;
+    }
+
+    .jumbotron a {
+        font-size: 13px;
+    }
+    
+    .btn:link, .btn:visited {
+        padding: 5px 20px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .jumbotron {
+        padding: 0 4%;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .second-title {
+        font-size: 25px;
+    }
+
+    footer a{
+        text-decoration: none;
+    }
+}
